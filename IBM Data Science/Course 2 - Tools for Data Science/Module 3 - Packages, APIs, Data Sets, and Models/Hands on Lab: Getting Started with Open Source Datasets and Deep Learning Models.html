@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <style>
+  table {
+    border-collapse: collapse;   /* removes double borders */
+    width: 100%;                 /* full width */
+  }
+  th, td {
+    border: 1px solid black;     /* table borders */
+    padding: 8px;                /* space inside cells */
+    text-align: left;            /* align text */
+  }
+  th {
+    background-color: #f2f2f2;   /* gray background for headers */
+  }
+  tr:nth-child(even) {
+    background-color: #fafafa;   /* zebra stripes */
+  }
+  tr:hover {
+    background-color: #f1f1f1;   /* highlight on hover */
+  }
+</style>
+    </head>
+<body>
+<div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module1/images/SN_web_lightmode.png" width="300" alt="Skills Network icon">
+
+<h1><span class="header-link octicon octicon-link"></span>Hands on Lab: Getting Started with Open Source Datasets and Deep Learning Models</h1><p>In this lab, you will explore how to access and utilize open source datasets for machine learning projects. You will also get hands-on experience with pre-trained deep learning models to accelerate your development process.</p>
+<h2><span class="header-link octicon octicon-link"></span>Objective of Exercise 1:</h2><ul>
+<li>Explore the open data sets.</li></ul>
+<h2><span class="header-link octicon octicon-link"></span>Objective of Exercise 2:</h2><ul>
+<li>Find ready-to-use deep learning models on the Model Asset Exchange.</li><li>Explore the deep learning model trained to detect objects in an image.</li></ul>
+<p><em>It will take you approximately 15 minutes to complete the lab. Only a web browser is required to complete the tasks.</em></p>
+<h2><span class="header-link octicon octicon-link"></span>Exercise 1: Explore open source datasets</h2><p> Most datasets are complemented by Python notebooks that you can use to explore, pre-process, and analyze the data. Here we will be exploring a public weather dataset taken from kaggle <a href="https://www.kaggle.com/datasets/mexwell/noaa-weather-data-jfk-airport" target="_blank" rel="noopener noreferrer">LINK</a></p>
+<h3><span class="header-link octicon octicon-link"></span>Step-by-Step Instructions</h3><ol>
+<li><p>Click <a href="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/7B7CdrStANaslFDaQPTbOw/Noaadataset.html" target="_blank" rel="noopener noreferrer" title="HERE">HERE</a> to view the dataset.</p>
+</li><li><p>Once the page loads, click the <strong>Dataset Preview</strong> tab at the top of the page.</p>
+</li></ol>
+<p>This will allow you to:</p>
+<ul>
+<li><p>View a sample of the data directly in your browser.</p>
+</li><li><p>Understand the structure and fields of the dataset.</p>
+</li><li><p>Explore metadata and glossary terms associated with the dataset.</p>
+</li></ul>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/ZzAvgZTfFTWkvgcuZ60TVQ/Noaa.png" width="600" alt="NOAA Weather Data dataset with Preview data and notebooks highlighted">
+<br><br>
+
+<ol start="3">
+<li>Next, click the <strong>Notebook Preview</strong> tab.</li></ol>
+<ul>
+<li>This opens a sample Python notebook associated with the dataset.</li><li>The notebook walks through:<ul>
+<li>Cleaning the weather data.</li><li>Performing exploratory analysis.</li><li>Building predictive models to help airports better manage flight schedules.</li></ul>
+</li></ul>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/uG4V7VAEMqBY-kTdZBPxqg/Noaa2.png" width="600" alt="NOAA Weather Data dataset with Preview data and notebooks highlighted">
+<br><br>
+
+<p><strong>This concludes Exercise 1 of this lab, which introduced you to the open source dataset. You may proceed to Exercise 2.</strong></p>
+<ol start="4">
+<li><strong>[Optional]</strong> If you are comfortable using Jupyter Notebooks, you can download and run the notebook locally by clicking<br><a href="https://cf-courses-data.static.labs.skills.network/zjM2xesIRK5Mzcn02E0BgQ/noaa-weather-data-v1.ipynb" target="_blank" rel="noopener noreferrer">HERE</a></li></ol>
+<h2><span class="header-link octicon octicon-link"></span>Exercise 2 - Explore deep learning models</h2><p>The Model Asset Exchange is a curated repository of Open Source deep learning models for a variety of domains, such as text, image, audio, and video processing. </p>
+<p>For more details, please visit - <a href="https://github.com/CODAIT/max-central-repo" target="_blank" rel="noopener noreferrer">https://github.com/CODAIT/max-central-repo</a> webpage.</p>
+<p>The curated list includes deployable models, which you can run as a microservice locally or in the cloud on Docker or Kubernetes, and trainable models where you can use your own data to train the models. Some of the models are already built for you to test. Let's test one of the models. </p>
+<p>In this exercise, explore the <strong>Object Detector</strong> model hosted on CodePen platform. This model recognizes the objects present in an image. The model consists of a deep convolutional net base model for image feature extraction, together with additional convolutional layers specialized for the task of object detection, trained on the COCO data set. The input to the model is an image, and the output are extracted objects from the image, appropriately labeled.</p>
+<p><strong>CodePen</strong> is a social development environment. At its heart, it allows to write code in the browser and see the results of it as you build. It is a useful and liberating online code editor for developers of any skill and is particularly empowering for people learning to code.</p>
+<ol>
+<li><p>Navigate to <a href="https://codepen.io/collection/DzdpJM/#" target="_blank" rel="noopener noreferrer"><strong>CodePen</strong></a> webpage.</p>
+
+</li><li><p>Select <strong>MAX TFJS models</strong> as shown in the screenshot below. Here the <strong>Image Segmenter</strong>, divides an image into regions or categories that correspond to different objects or parts of objects. Every pixel in an image is allocated to one of a number of these categories.</p>
+</li></ol>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module1/images/selectmodel.png" alt="Testing the MAX TFJS models">
+
+<ol start="3">
+<li>Click on <strong>Select Image</strong> and upload an image. You may choose images with a person, dog, cat, truck, car, and so on, which are labels the model has been trained on.</li></ol>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module1/images/selectimage.png" alt="Select an image for the Image Segmenter">
+
+
+<details><summary>Click here for all the labels the model is trained on</summary>
+
+<ol>
+<li>person</li><li>bicycle</li><li>car</li><li>motorcycle</li><li>airplane</li><li>bus</li><li>train</li><li>truck</li><li>boat</li><li>traffic light</li><li>fire hydrant</li><li>stop sign</li><li>parking meter</li><li>bench</li><li>bird</li><li>cat</li><li>dog</li><li>horse</li><li>sheep</li><li>cow</li><li>elephant</li><li>bear</li><li>zebra</li><li>giraffe</li><li>backpack</li><li>umbrella</li><li>handbag</li><li>tie</li><li>suitcase</li><li>frisbee</li><li>skis</li><li>snowboard</li><li>sports ball</li><li>kite</li><li>baseball bat</li><li>baseball glove</li><li>skateboard</li><li>surfboard</li><li>tennis racket</li><li>bottle</li><li>wine glass</li><li>cup</li><li>fork</li><li>knife</li><li>spoon</li><li>bowl</li><li>banana</li><li>apple</li><li>sandwich</li><li>orange</li><li>broccoli</li><li>carrot</li><li>hot dog</li><li>pizza</li><li>donut</li><li>cake</li><li>chair</li><li>couch</li><li>potted plant</li><li>bed</li><li>dining table</li><li>toilet</li><li>tv</li><li>laptop</li><li>mouse</li><li>remote</li><li>keyboard</li><li>cell phone</li><li>microwave</li><li>oven</li><li>toaster</li><li>sink</li><li>refrigerator</li><li>book</li><li>clock</li><li>vase</li><li>scissors</li><li>teddy bear</li><li>hair drier</li><li>toothbrush</li></ol>
+</details>
+
+
+
+<ol start="4">
+<li>Click the icon <strong>Extract prediction</strong> as shown below:</li></ol>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module1/images/extract.png" alt="Picture of five white puppies in a basket and Extract prediction icon">
+
+<p>You can see the output of the prediction on the basis of the uploaded image.</p>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork/labs/Module1/images/predict.png" alt="Output of prediction based on the image, shown with background separated from puppies">
+
+<p>Here the background and the dog image are separated, showing two different parts of the image. </p>
+<p><strong>You can also try the webcam option, which will show the real-time prediction by the toggle-on webcam option.</strong></p>
+<p>This concludes Exercise 2 of this lab, which introduced the Model Asset Exchange (MAX). </p>
+<blockquote>
+<p>You can also watch a demo of the object detector model <a href="https://video.ibm.com/recorded/128825527?utm_source=skills_network&amp;utm_content=in_lab_content_link&amp;utm_id=Lab-IBMDeveloperSkillsNetwork-DS0105EN-SkillsNetwork" target="_blank" rel="noopener noreferrer">here</a>.</p>
+</blockquote>
+<h2><span class="header-link octicon octicon-link"></span>Author(s)</h2><h4> Joseph Santarcangelo </h4><h4></h4>
+
+<h3><span class="header-link octicon octicon-link"></span>Other Contributor(s)</h3><p>Lavanya</p>
+
+
+<footer> 
+
+
+<footer><img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DV0151EN-SkillsNetwork/images/footer_6b.png" alt="cognitiveclass.ai logo"> </footer> 
+
+</footer></div>
+</body>
+</html>

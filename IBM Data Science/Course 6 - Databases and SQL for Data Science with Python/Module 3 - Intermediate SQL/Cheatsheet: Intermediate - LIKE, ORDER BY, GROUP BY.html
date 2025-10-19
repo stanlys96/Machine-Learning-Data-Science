@@ -1,0 +1,159 @@
+<html>
+    <head>
+        <style>
+  table {
+    border-collapse: collapse;   /* removes double borders */
+    width: 100%;                 /* full width */
+  }
+  th, td {
+    border: 1px solid black;     /* table borders */
+    padding: 8px;                /* space inside cells */
+    text-align: left;            /* align text */
+  }
+  th {
+    background-color: #f2f2f2;   /* gray background for headers */
+  }
+  tr:nth-child(even) {
+    background-color: #fafafa;   /* zebra stripes */
+  }
+  tr:hover {
+    background-color: #f1f1f1;   /* highlight on hover */
+  }
+</style>
+    </head>
+<body>
+<div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><h2><span class="header-link octicon octicon-link"></span>SQL Cheat Sheet: Intermediate - LIKE, ORDER BY, GROUP BY</h2><table>
+<tbody><tr>
+<th style="width:10%;">
+Command
+</th>
+<th style="width:30%;">
+Syntax (MySQL/DB2)
+</th>
+<th style="width:30%;">
+Description
+</th>
+<th style="width:30%;">
+Example (MySQL/DB2)
+</th>
+</tr>
+
+<tr>
+<td style="width:10%;">
+LIKE
+</td>
+<td style="width:30%;">
+<code>SELECT column1, column2, ...
+FROM table_name
+WHERE columnN LIKE pattern; </code>
+</td>
+<td style="width:30%;">
+<code>LIKE</code> operator is used in a WHERE clause to search for a specified pattern in a column.<br>
+
+<p>Two wildcards often used in conjunction with the LIKE operator are percent sign(%) and underscore sign (_), depending upon the SQL engine being used.</p>
+</td>
+<td style="width:30%;">
+<code>SELECT f_name , l_name
+FROM employees
+WHERE address LIKE '%Elgin,IL%';</code>
+<br>
+This command will output all entries with <code>Elgin,IL</code> in the Address.
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+BETWEEN
+</td>
+<td style="width:30%;">
+<code>SELECT column_name(s) 
+FROM table_name
+WHERE column_name BETWEEN value1 AND value2;</code>
+</td>
+<td style="width:30%;">
+The <code>BETWEEN</code> operator selects values within a given range. The values can be numbers, text, or dates. The <code>BETWEEN</code> operator is inclusive: begin and end values are included. 
+</td>
+<td style="width:30%;">
+<code>SELECT * FROM employees WHERE salary BETWEEN 40000 AND 80000;</code>
+<br>
+This generates all records of employees with salaries between 40000 and 80000.
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ORDER BY
+</td>
+<td style="width:30%;">
+<code>SELECT column1, column2, ...
+FROM table_name
+ORDER BY column1, column2, ... ASC|DESC; </code>
+</td>
+<td style="width:30%;">
+<code>ORDER BY</code> keyword is used to sort the result-set in ascending or descending order. The default is ascending. In case of multiple columns in ORDER BY, the sorting will be done in the sequence of the appearance of the arguments.
+</td>
+<td style="width:30%;">
+<code>SELECT f_name, l_name, dep_id 
+FROM employees
+ORDER BY dep_id DESC, l_name;</code>
+<br>
+This displays the first name, last name, and department ID of employees, first sorted in descending order of department IDs and then sorted alphabetically as per their last names. 
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+GROUP BY
+</td>
+<td style="width:30%;">
+<code>SELECT column_name(s)
+FROM table_name
+GROUP BY column_name(s)
+</code>
+</td>
+<td style="width:30%;">
+<code>GROUP BY</code> clause is used in collaboration with the SELECT statement to arrange data with identical values into groups.
+</td>
+<td style="width:30%;">
+<code>SELECT dep_id, COUNT(*)
+FROM employees
+GROUP BY dep_id;</code>
+<br>
+This returns the department IDs and the number of employees in them, grouped by the department IDs.
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+HAVING
+</td>
+<td style="width:30%;">
+<code>SELECT column_name(s)
+FROM table_name
+GROUP BY column_name(s)
+HAVING condition
+</code>
+</td>
+<td style="width:30%;">
+<code>HAVING</code> clause is used in conjunction with <code>GROUP BY</code> clause in collaboration with the SELECT statement in order to filter the data as per the given condition and then group as per identical values of a specified parameter.
+</td>
+<td style="width:30%;">
+<code>SELECT DEP_ID, COUNT(*) AS "NUM_EMPLOYEES", AVG(SALARY) AS "AVG_SALARY"
+FROM EMPLOYEES
+GROUP BY DEP_ID
+HAVING count(*) &lt; 4
+ORDER BY AVG_SALARY;</code>
+<br>
+
+</td>
+</tr>
+</tbody></table>
+
+<h2><span class="header-link octicon octicon-link"></span>Author(s)</h2><p><a href="https://www.linkedin.com/in/lakshmi-holla-b39062149/" target="_blank" rel="noopener noreferrer">Lakshmi Holla</a><br><a href="https://www.linkedin.com/in/pratiksha-verma-6487561b1/" target="_blank" rel="noopener noreferrer">Pratiksha Verma</a><br><a href="https://www.coursera.org/instructor/~129186572" target="_blank" rel="noopener noreferrer">Abhishek Gagneja</a></p>
+<footer>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-DB0201EN-SkillsNetwork/images/footer_6b.png" alt="">
+</footer>
+<br>
+</div>
+</body>
+</html>

@@ -1,0 +1,605 @@
+<html>
+    <head>
+        <style>
+  table {
+    border-collapse: collapse;   /* removes double borders */
+    width: 100%;                 /* full width */
+  }
+  th, td {
+    border: 1px solid black;     /* table borders */
+    padding: 8px;                /* space inside cells */
+    text-align: left;            /* align text */
+  }
+  th {
+    background-color: #f2f2f2;   /* gray background for headers */
+  }
+  tr:nth-child(even) {
+    background-color: #fafafa;   /* zebra stripes */
+  }
+  tr:hover {
+    background-color: #f1f1f1;   /* highlight on hover */
+  }
+</style>
+    </head>
+<body>
+<div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><h2><span class="header-link octicon octicon-link"></span>Python Data Structures Cheat Sheet</h2><br>
+
+<p><span style="color:grey; font-size:24px;"><b>List</b></span></p>
+<table>
+<tbody><tr>
+<th>Package/Method</th>
+<th>Description</th>
+<th>Code Example</th>
+</tr>
+<tr>
+<td>append()</td>
+<td>The `append()` method is used to add an element to the end of a list.</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">list_name</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="pln">element</span><span class="pun">)</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-0">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-0">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">fruits</span><span class="pun">.</span><span class="pln">append</span><span class="pun">(</span><span class="str">"mango"</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">fruits</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-1">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-1">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>copy()</td>
+<td>The `copy()` method is used to create a shallow copy of a list.</td>
+<td>Example 1: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">new_list </span><span class="pun">=</span><span class="pln"> my_list</span><span class="pun">.</span><span class="pln">copy</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">new_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L2"><code><span class="com"># Output: [1, 2, 3, 4, 5]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-2">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-2">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>count()</td>
+<td>The `count()` method is used to count the number of occurrences of a specific element in a list in Python.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">count </span><span class="pun">=</span><span class="pln"> my_list</span><span class="pun">.</span><span class="pln">count</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">count</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L2"><code><span class="com"># Output: 4</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-3">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-3">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Creating a list</td>
+<td>A list is a built-in data type that represents an ordered and mutable collection of elements. Lists are enclosed in square brackets [] and elements are separated by commas.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"mango"</span><span class="pun">]</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-4">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-4">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>del</td>
+<td>The `del` statement is used to remove an element from list. `del` statement removes the element at the specified index.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="kwd">del</span><span class="pln"> my_list</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="com"># Removes the element at index 2 print(my_list) </span></code></li><li class="L2"><code><span class="com"># Output: [10, 20, 40, 50]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-5">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-5">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>extend()</td>
+<td>The `extend()` method is used to add multiple elements to a list. It takes an iterable (such as another list, tuple, or string) and appends each element of the iterable to the original list.</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">list_name</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">(</span><span class="pln">iterable</span><span class="pun">)</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-6">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-6">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">more_fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="str">"mango"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"grape"</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L2"><code><span class="pln">fruits</span><span class="pun">.</span><span class="pln">extend</span><span class="pun">(</span><span class="pln">more_fruits</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">fruits</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-7">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-7">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Indexing</td>
+<td>Indexing in a list allows you to access individual elements by their position. In Python, indexing starts from 0 for the first element and goes up to `length_of_list - 1`.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[</span><span class="lit">0</span><span class="pun">])</span><span class="pln"> </span></code></li><li class="L2"><code><span class="com"># Output: 10 (accessing the first element) </span></code></li><li class="L3"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[-</span><span class="lit">1</span><span class="pun">])</span><span class="pln"> </span></code></li><li class="L4"><code><span class="com"># Output: 50 (accessing the last element using negative indexing)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-8">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-8">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+    
+</tr>
+<tr>
+<td>insert()</td>
+<td>The `insert()` method is used to insert an element.</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">list_name</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">(</span><span class="pln">index</span><span class="pun">,</span><span class="pln"> element</span><span class="pun">)</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-9">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-9">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">.</span><span class="pln">insert</span><span class="pun">(</span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">6</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-10">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-10">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Modifying a list</td>
+<td>You can use indexing to modify or assign new values to specific elements in the list.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="lit">25</span><span class="pln"> </span><span class="com"># Modifying the second element </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: [10, 25, 30, 40, 50]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-11">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-11">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>`pop()` method is another way to remove an element from a list in Python. It removes and returns the element at the specified index. If you don't provide an index to the `pop()` method, it will remove and return the last element of the list by default</td>
+<td>Example 1: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">removed_element </span><span class="pun">=</span><span class="pln"> my_list</span><span class="pun">.</span><span class="pln">pop</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span><span class="pln"> </span><span class="com"># Removes and returns the element at index 2 </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">removed_element</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: 30 </span></code></li><li class="L4"><code></code></li><li class="L5"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L6"><code><span class="com"># Output: [10, 20, 40, 50] </span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-12">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-12">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example 2: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">removed_element </span><span class="pun">=</span><span class="pln"> my_list</span><span class="pun">.</span><span class="pln">pop</span><span class="pun">()</span><span class="pln"> </span><span class="com"># Removes and returns the last element </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">removed_element</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: 50 </span></code></li><li class="L4"><code></code></li><li class="L5"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L6"><code><span class="com"># Output: [10, 20, 30, 40]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-13">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-13">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>remove()</td>
+<td>To remove an element from a list. The `remove()` method removes the first occurrence of the specified value.</td>
+<td>Example: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">,</span><span class="pln"> </span><span class="lit">40</span><span class="pun">,</span><span class="pln"> </span><span class="lit">50</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="lit">30</span><span class="pun">)</span><span class="pln"> </span><span class="com"># Removes the element 30 </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: [10, 20, 40, 50]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-14">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-14">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>The `reverse()` method is used to reverse the order of elements in a list</td>
+<td>Example 1: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">.</span><span class="pln">reverse</span><span class="pun">()</span><span class="pln"> </span><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L2"><code><span class="com"># Output: [5, 4, 3, 2, 1]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-15">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-15">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>Slicing</td>
+<td>You can use slicing to access a range of elements from a list.</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">list_name</span><span class="pun">[</span><span class="pln">start</span><span class="pun">:</span><span class="kwd">end</span><span class="pun">:</span><span class="pln">step</span><span class="pun">]</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-16">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-16">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li><li>10</li><li>11</li><li>12</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">3</span><span class="pun">,</span><span class="pln"> </span><span class="lit">4</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[</span><span class="lit">1</span><span class="pun">:</span><span class="lit">4</span><span class="pun">])</span><span class="pln"> </span></code></li><li class="L2"><code><span class="com"># Output: [2, 3, 4] (elements from index 1 to 3)</span></code></li><li class="L3"><code></code></li><li class="L4"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[:</span><span class="lit">3</span><span class="pun">])</span><span class="pln"> </span></code></li><li class="L5"><code><span class="com"># Output: [1, 2, 3] (elements from the beginning up to index 2) </span></code></li><li class="L6"><code></code></li><li class="L7"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[</span><span class="lit">2</span><span class="pun">:])</span><span class="pln"> </span></code></li><li class="L8"><code><span class="com"># Output: [3, 4, 5] (elements from index 2 to the end) </span></code></li><li class="L9"><code></code></li><li class="L0"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">[::</span><span class="lit">2</span><span class="pun">])</span><span class="pln"> </span></code></li><li class="L1"><code><span class="com"># Output: [1, 3, 5] (every second element)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-17">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-17">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>The `sort()` method is used to sort the elements of a list in ascending order. If you want to sort the list in descending order, you can pass the `reverse=True` argument to the `sort()` method.</td>
+<td>Example 1: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">.</span><span class="pln">sort</span><span class="pun">()</span><span class="pln"> </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: [1, 2, 5, 8, 9] </span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-18">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-18">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example 2: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">my_list </span><span class="pun">=</span><span class="pln"> </span><span class="pun">[</span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">2</span><span class="pun">,</span><span class="pln"> </span><span class="lit">8</span><span class="pun">,</span><span class="pln"> </span><span class="lit">1</span><span class="pun">,</span><span class="pln"> </span><span class="lit">9</span><span class="pun">]</span><span class="pln"> </span></code></li><li class="L1"><code><span class="pln">my_list</span><span class="pun">.</span><span class="pln">sort</span><span class="pun">(</span><span class="pln">reverse</span><span class="pun">=</span><span class="kwd">True</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L2"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">my_list</span><span class="pun">)</span><span class="pln"> </span></code></li><li class="L3"><code><span class="com"># Output: [9, 8, 5, 2, 1]</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-19">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-19">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+</tbody></table>
+<span style="color:grey; font-size:24px;"><b>Tuple</b></span>
+<table>
+<tbody><tr>
+<th>Package/Method</th>
+<th>Description</th>
+<th>Code Example</th>
+</tr>
+<tr>
+<td>count()</td>
+<td>The count() method for a tuple is used to count how many times a specified element appears in the tuple. </td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">tuple</span><span class="pun">.</span><span class="pln">count</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-20">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-20">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">)</span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">fruits</span><span class="pun">.</span><span class="pln">count</span><span class="pun">(</span><span class="str">"apple"</span><span class="pun">))</span><span class="pln"> </span><span class="com">#Counts the number of times apple is found in tuple.</span></code></li><li class="L2"><code><span class="com">#Output: 2</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-21">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-21">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>index()</td>
+<td>The index() method in a tuple is used to find the first occurrence of a specified value and returns its position (index). If the value is not found, it raises a ValueError.</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">tuple</span><span class="pun">.</span><span class="pln">index</span><span class="pun">(</span><span class="pln">value</span><span class="pun">)</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-22">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-22">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">,</span><span class="str">"apple"</span><span class="pun">)</span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">fruits</span><span class="pun">.</span><span class="pln">index</span><span class="pun">(</span><span class="str">"apple"</span><span class="pun">))</span><span class="pln"> </span><span class="com">#Returns the index value at which apple is present.</span></code></li><li class="L2"><code><span class="com">#Output: 0</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-23">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-23">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>sum()</td>
+<td>The sum() function in Python can be used to calculate the sum of all elements in a tuple, provided that the elements are numeric (integers or floats).</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">sum</span><span class="pun">(</span><span class="pln">tuple</span><span class="pun">)</span><span class="pln"> </span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-24">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-24">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">numbers </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">)</span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">sum</span><span class="pun">(</span><span class="pln">numbers</span><span class="pun">))</span></code></li><li class="L2"><code><span class="com">#Output: 65</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-25">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-25">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+<td>min() and max()</td>
+<td>Find the smallest (min()) or largest (max()) element in a tuple.
+</td>
+<td>Example:
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">numbers </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="lit">10</span><span class="pun">,</span><span class="pln"> </span><span class="lit">20</span><span class="pun">,</span><span class="pln"> </span><span class="lit">5</span><span class="pun">,</span><span class="pln"> </span><span class="lit">30</span><span class="pun">)</span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">min</span><span class="pun">(</span><span class="pln">numbers</span><span class="pun">))</span><span class="pln">  </span></code></li><li class="L2"><code><span class="com">#Output: 5</span></code></li><li class="L3"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">max</span><span class="pun">(</span><span class="pln">numbers</span><span class="pun">))</span></code></li><li class="L4"><code><span class="com">#Output: 30</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-26">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-26">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+
+<tr>
+<td>len()</td>
+<td>Get the number of elements in the tuple using len().</td>
+<td>Syntax: 
+    
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">len</span><span class="pun">(</span><span class="pln">tuple</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-27">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-27">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>Example: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code><span class="pln">fruits </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="str">"apple"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"banana"</span><span class="pun">,</span><span class="pln"> </span><span class="str">"orange"</span><span class="pun">)</span></code></li><li class="L1"><code><span class="kwd">print</span><span class="pun">(</span><span class="pln">len</span><span class="pun">(</span><span class="pln">fruits</span><span class="pun">))</span><span class="pln"> </span><span class="com">#Returns length of the tuple.</span></code></li><li class="L2"><code><span class="com">#Output: 3</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-28">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-28">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+</td>
+</tr>
+<tr>
+
+</tr>
+</tbody></table>
+
+
+<footer>
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/images/footer_6b.png" alt="">
+</footer>
+<h3> © IBM Corporation. All rights reserved. </h3><h3></h3></div>
+</body>
+</html>

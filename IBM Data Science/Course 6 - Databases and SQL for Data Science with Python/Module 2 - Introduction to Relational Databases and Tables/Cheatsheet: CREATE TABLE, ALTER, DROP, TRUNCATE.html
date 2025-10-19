@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <style>
+  table {
+    border-collapse: collapse;   /* removes double borders */
+    width: 100%;                 /* full width */
+  }
+  th, td {
+    border: 1px solid black;     /* table borders */
+    padding: 8px;                /* space inside cells */
+    text-align: left;            /* align text */
+  }
+  th {
+    background-color: #f2f2f2;   /* gray background for headers */
+  }
+  tr:nth-child(even) {
+    background-color: #fafafa;   /* zebra stripes */
+  }
+  tr:hover {
+    background-color: #f1f1f1;   /* highlight on hover */
+  }
+</style>
+    </head>
+<body>
+<div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><h2><span class="header-link octicon octicon-link"></span>SQL Cheat Sheet: CREATE TABLE, ALTER, DROP, TRUNCATE</h2><table>
+<tbody><tr>
+<th style="width:10%;">
+Command
+</th>
+<th style="width:30%;">
+Syntax
+</th>
+<th style="width:30%;">
+Description
+</th>
+<th style="width:30%;">
+Example
+</th>
+</tr>
+
+<tr>
+<td style="width:10%;">
+CREATE TABLE
+</td>
+<td style="width:30%;">
+MySQL/DB2: <code> CREATE TABLE table_name (col1 datatype <i>optional keyword</i>, col2 datatype <i>optional keyword</i>,col3 datatype <i>optional keyword</i>,..., coln datatype <i>optional keyword</i>) </code>
+</td>
+<td style="width:30%;">
+<code>CREATE TABLE</code> statement is to create the table. Each column in the table is specified with its name, data type and an optional keyword which could be <b>PRIMARY KEY</b>, <b>NOT NULL</b>, etc.,
+</td>
+<td style="width:30%;">
+MySQL/DB2:  
+<code> CREATE TABLE employee ( employee_id char(2) PRIMARY KEY, first_name varchar(30) NOT NULL, mobile int);</code>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ALTER TABLE - ADD COLUMN
+</td>
+<td style="width:30%;">
+MySQL/DB2:  
+    
+<p><code> Option 1. ALTER TABLE table_name ADD column_name_1 datatype....ADD COLUMN column_name_n datatype; </code><br><br><br><code>Option 2. ALTER TABLE table_name ADD COLUMN column_name_1 datatype....ADD COLUMN column_name_n datatype; </code></p>
+</td>
+<td style="width:30%;">
+<code>ALTER TABLE</code> statement is used to add the columns to a table.
+</td>
+<td style="width:30%;">
+MySQL/DB2
+
+<p><code> Option 1. ALTER TABLE employee ADD income bigint;</code><br>    <br><br><code> Option 2. ALTER TABLE employee ADD COLUMN income bigint;</code></p>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ALTER TABLE - ALTER COLUMN
+</td>
+<td style="width:30%;">
+ MySQL: <code> ALTER TABLE table_name MODIFY column_name_1 new_data_type;</code>
+    
+<p> DB2:  <code>ALTER TABLE table_name ALTER COLUMN column_name_1 SET DATA TYPE datatype;</code></p>
+</td>
+<td style="width:30%;">
+MySQL: <code>ALTER TABLE MODIFY </code> MODIFY clause is used with the ALTER TABLE statement to modify the data type of columns.
+    
+<p>Db2: <code>ALTER TABLE ALTER COLUMN </code> statement is used to modify the data type of columns.</p>
+</td>
+<td style="width:30%;">
+MySQL:<code> ALTER TABLE employee MODIFY mobile CHAR(20);</code>
+    
+<p>DB2: <code>ALTER TABLE employee ALTER COLUMN mobile SET DATA TYPE CHAR(20);</code></p>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ALTER TABLE - DROP COLUMN
+</td>
+<td style="width:30%;">
+MySQL/DB2: <code> ALTER TABLE table_name DROP COLUMN column_name_1 ;</code>
+</td>
+<td style="width:30%;">
+<code>ALTER TABLE DROP COLUMN </code> statement is used to remove columns from a table.
+</td>
+<td style="width:30%;">
+MySQL/DB2: <br>
+
+ 
+<p><code>ALTER TABLE employee DROP COLUMN mobile ;</code></p>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ALTER TABLE - RENAME COLUMN
+</td>
+<td style="width:30%;">
+MySQL:<code>ALTER TABLE table_name CHANGE COLUMN current_column_name new_column_name datatype [optional keywords];</code>
+    
+<p>DB2:<code> ALTER TABLE table_name RENAME COLUMN current_column_name TO new_column_name;</code></p>
+</td>
+<td style="width:30%;">
+MySQL: <code>ALTER TABLE CHANGE COLUMN </code> CHANGE COLUMN clause is used to rename the columns in a table.
+    
+<p>DB2: <code>ALTER TABLE RENAME COLUMN </code> statement is used to rename the columns in a table.</p>
+</td>
+<td style="width:30%;">
+MySQL: <code>ALTER TABLE employee CHANGE COLUMN first_name name VARCHAR(255);</code>
+    
+<p>DB2: <code>ALTER TABLE employee RENAME COLUMN first_name TO name;</code></p>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+TRUNCATE TABLE
+</td>
+<td style="width:30%;">
+MySQL: <code>TRUNCATE TABLE table_name;</code>
+    
+<p>DB2: <code>TRUNCATE TABLE table_name  IMMEDIATE;</code></p>
+</td>
+<td style="width:30%;">
+MySQL: <code>TRUNCATE TABLE</code> statement is used to delete all of the rows in a table. 
+    
+<p>Db2: The <code>IMMEDIATE</code> specifies to process the statement immediately and that it cannot be undone.</p>
+</td>
+<td style="width:30%;">
+MySQL: <code>TRUNCATE TABLE employee;</code>
+    
+<p>DB2: <code>TRUNCATE TABLE employee IMMEDIATE ;</code></p>
+</td>
+</tr>
+
+<tr>
+<td style="width:10%;">
+ DROP TABLE
+</td>
+<td style="width:30%;">MySQL/DB2<code>DROP TABLE table_name ;</code>
+</td>
+<td style="width:30%;">
+ Use the <code>DROP TABLE</code> statement to delete a table from a database. If you delete a table that contains data, by default the data will be deleted alongside the table.
+</td>
+<td style="width:30%;">
+MySQL/DB2: <br>
+
+ 
+<p><code>DROP TABLE employee ;</code></p>
+</td>
+</tr>
+
+</tbody></table>
+
+<h2><span class="header-link octicon octicon-link"></span>Author(s)</h2><p><a href="https://www.linkedin.com/in/birlahimanshu/" target="_blank" rel="noopener noreferrer">Himanshu Birla</a><br><a href="https://www.linkedin.com/in/niveditha-pandith-53a057231/" target="_blank" rel="noopener noreferrer">Niveditha Pandith TS</a></p>
+<p><img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DV0151EN-SkillsNetwork/images/footer_logo_sn_ibm.png" alt=""></p>
+</div>
+</body>
+</html>

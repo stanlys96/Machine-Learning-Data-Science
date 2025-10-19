@@ -1,0 +1,209 @@
+<html>
+    <head>
+<style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style>
+    </head>
+<body>
+<div class="markdown-body editormd-preview-container editormd-preview-active" previewcontainer="true"><h1><span class="header-link octicon octicon-link"></span>Reading: Format Strings in Python</h1><p><strong>Estimated effort: 5 mins</strong></p>
+<p>Format strings are a way to inject variables into a string in Python. They are used to format strings and produce more human-readable outputs. There are several ways to format strings in Python:</p>
+<h2><span class="header-link octicon octicon-link"></span>String interpolation (f-strings)</h2><p>Introduced in Python 3.6, f-strings are a new way to format strings in Python. They are prefixed with 'f' and use curly braces {} to enclose the variables that will be formatted. For example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"John"</span></code></li><li class="L1"><code class="language-python"><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">30</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">f</span><span class="str">"My name is {name} and I am {age} years old."</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-0">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-0">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">My</span><span class="pln"> name </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">John</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> I am </span><span class="lit">30</span><span class="pln"> years old</span><span class="pun">.</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-1">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-1">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<h2><span class="header-link octicon octicon-link"></span>str.format()</h2><p>This is another way to format strings in Python. It uses curly braces {} as placeholders for variables which are passed as arguments in the format() method. For example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"John"</span></code></li><li class="L1"><code class="language-python"><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">50</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="str">"My name is {} and I am {} years old."</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">))</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-2">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-2">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">My</span><span class="pln"> name </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">John</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> I am </span><span class="lit">50</span><span class="pln"> years old</span><span class="pun">.</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-3">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-3">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<h2><span class="header-link octicon octicon-link"></span>% Operator</h2><p>This is one of the oldest ways to format strings in Python. It uses the % operator to replace variables in the string. For example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">name </span><span class="pun">=</span><span class="pln"> </span><span class="str">"Johnathan"</span></code></li><li class="L1"><code class="language-python"><span class="pln">age </span><span class="pun">=</span><span class="pln"> </span><span class="lit">30</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="str">"My name is %s and I am %d years old."</span><span class="pln"> </span><span class="pun">%</span><span class="pln"> </span><span class="pun">(</span><span class="pln">name</span><span class="pun">,</span><span class="pln"> age</span><span class="pun">))</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-4">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-4">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">My</span><span class="pln"> name </span><span class="kwd">is</span><span class="pln"> </span><span class="typ">Johnathan</span><span class="pln"> </span><span class="kwd">and</span><span class="pln"> I am </span><span class="lit">30</span><span class="pln"> years old</span><span class="pun">.</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-5">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-5">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>“<strong>My name is %s and I am %d years old.</strong>“: This is a string that includes format specifiers:</p>
+<ul>
+<li><strong>%s</strong>: This is a placeholder for a string.</li><li><strong>%d</strong>: This is a placeholder for an integer.</li></ul>
+<p><strong>% (name, age)</strong>: This is a tuple containing the variables name and age. The values of these variables will replace the placeholders in the string.</p>
+<p>Each of these methods has its own advantages and use cases. However, f-strings are generally considered the most modern and preferred way to format strings in Python due to their readability and performance. </p>
+<h2><span class="header-link octicon octicon-link"></span>Additional capabilities</h2><p>F-strings are also able to evaluate expressions inside the curly braces, which can be very handy. For example:</p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li><li>3</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">x </span><span class="pun">=</span><span class="pln"> </span><span class="lit">10</span></code></li><li class="L1"><code class="language-python"><span class="pln">y </span><span class="pun">=</span><span class="pln"> </span><span class="lit">20</span></code></li><li class="L2"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="pln">f</span><span class="str">"The sum of x and y is {x+y}."</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-6">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-6">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">The</span><span class="pln"> sum of x </span><span class="kwd">and</span><span class="pln"> y </span><span class="kwd">is</span><span class="pln"> </span><span class="lit">30.</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-7">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-7">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<h2><span class="header-link octicon octicon-link"></span>Raw String (r’’)</h2><p>In Python, raw strings are a powerful tool for handling textual data, especially when dealing with escape characters. By prefixing a string literal with the letter ‘r’, Python treats the string as raw, meaning it interprets backslashes as literal characters rather than escape sequences.</p>
+<p>Consider the following examples of regular string and raw string:</p>
+<p><strong>Regular string:</strong></p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">regular_string </span><span class="pun">=</span><span class="pln"> </span><span class="str">"C:\new_folder\file.txt"</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="str">"Regular String:"</span><span class="pun">,</span><span class="pln"> regular_string</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-8">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-8">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">Regular</span><span class="pln"> </span><span class="typ">String</span><span class="pun">:</span><span class="pln">  C</span><span class="pun">:</span></code></li><li class="L1"><code><span class="pln">ew_folder</span><span class="pun"></span><span class="pln">ile</span><span class="pun">.</span><span class="pln">txt</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-9">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-9">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>In the regular string regular_string variable, the backslashes (\n) are interpreted as escape sequences. Therefore, \n represents a newline character, which would lead to an incorrect file path representation.</p>
+<p><strong>Raw string:</strong></p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li><li>2</li></ol><ol class="linenums"><li class="L0"><code class="language-python"><span class="pln">raw_string </span><span class="pun">=</span><span class="pln"> r</span><span class="str">"C:\new_folder\file.txt"</span></code></li><li class="L1"><code class="language-python"><span class="kwd">print</span><span class="pun">(</span><span class="str">"Raw String:"</span><span class="pun">,</span><span class="pln"> raw_string</span><span class="pun">)</span></code></li></ol>
+          <div class="code-block-actions multiple-lines z-0">
+            <button title="Copy" class="action-code-block copy-code-block multiple-lines">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-10">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block multiple-lines">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-10">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>This will output: </p>
+<pre class="prettyprint linenums prettyprinted" style=""><ol class="formatted-line-numbers"><li>1</li></ol><ol class="linenums"><li class="L0"><code><span class="typ">Raw</span><span class="pln"> </span><span class="typ">String</span><span class="pun">:</span><span class="pln"> C</span><span class="pun">:</span><span class="pln">\new_folder\file</span><span class="pun">.</span><span class="pln">txt</span></code></li></ol>
+          <div class="code-block-actions z-0 single-line">
+            <button title="Copy" class="action-code-block copy-code-block">
+              <i class="fa fa-copy" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-copy-11">Copied!</span>
+            </button>
+            <button title="Toggle Wrap" class="action-code-block wrap-code-block">
+              <i class="fa fa-align-left" aria-hidden="true"></i>
+              <span class="popuptext" id="md-code-block-wrap-11">Wrap Toggled!</span>
+            </button>
+            
+            
+          </div>
+        </pre>
+<p>However, in the raw string raw_string, the backslashes are treated as literal characters. This means that \n is not interpreted as a newline character, but rather as two separate characters, \ and n. Consequently, the file path is represented exactly as it appears.</p>
+<br>  
+
+<h4><span class="header-link octicon octicon-link"></span>Author: <a href="https://www.coursera.org/instructor/~129186572" target="_blank" rel="noopener noreferrer">Abhishek Gagneja</a></h4><footer> 
+    
+<img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DB0110EN-SkillsNetwork/images/MicrosoftTeams-image.png" alt=""> 
+
+<footer> 
+
+<br>
+
+</footer></footer></div>
+</body>
+</html>
